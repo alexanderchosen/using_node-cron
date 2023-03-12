@@ -9,18 +9,23 @@ const cron = require("node-cron")
 // the next * represents Days of the week, they can be represented with */ 0-7 / Mon-Sun / Monday-Sunday where 0 & 7 represents sunday, 1 - Monday...
 
 // using all * means every seconds, of every minute, of every hour, of every day of the month, of every month of the year, of every day of the week
-cron.schedule("* * * * * *", ()=>{
-    console.log("I'm in love with you Rachel !")
-})
+// cron.schedule("* * * * * *", ()=>{
+//     console.log("I'm in love with you Rachel !")
+// })
 
-// using 02 for minutes means every 2nd minute in every hour...
-cron.schedule("* 02 * * * *", ()=>{
-    console.log("Yes, I love you baby !")
-})
+// // using 02 for minutes means every 2nd minute in every hour...
+// cron.schedule("* 02 * * * *", ()=>{
+//     console.log("Yes, I love you baby !")
+// })
 
-// using Ranges
-cron.schedule("10-30 22 * * * *", ()=>{
-    console.log(" You deserve a gentleman like me. let's jump on this love boat together, my baby Racheli. I'll be right here waiting for you!")
+// // using Ranges
+// cron.schedule("10-30 22 * * * *", ()=>{
+//     console.log(" You deserve a gentleman like me. let's jump on this love boat together, my baby Racheli. I'll be right here waiting for you!")
+// })
+
+//  selecting certain time points
+cron.schedule("10,12,48 * 0,12,21,22 * Jan,Feb,Mar *", ()=>{
+    console.log("Rachel, I can't wait for what our future holds")
 })
 
 
