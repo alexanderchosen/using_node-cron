@@ -24,10 +24,13 @@ const cron = require("node-cron")
 // })
 
 //  selecting certain time points
-cron.schedule("10,12,48 * 0,12,21,22 * Jan,Feb,Mar *", ()=>{
-    console.log("Rachel, I can't wait for what our future holds")
-})
+// cron.schedule("10,12,48 * 0,12,21,22 * Jan,Feb,Mar *", ()=>{
+//     console.log("Rachel, I can't wait for what our future holds")
+// })
 
-
+ //  using step values
+ cron.schedule("*/2 10,15,25 * * * *", ()=>{
+    console.log("I think i need to get a sweet pet name for you, my baby Rachel")
+ })
 
 
